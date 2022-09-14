@@ -1,0 +1,327 @@
+
+/*---------->Header<-------------*/
+.header {
+    width: calc(100%-20px);
+    background-image: url("button-bar-img1.jpg");
+    position: sticky;
+    top: 0px;
+    padding: 10px;
+}
+
+/*---------->Container<----------*/
+.container {
+    padding: 1%;
+    background-color: whitesmoke;
+}
+.container div {
+        background-color: whitesmoke;
+}
+div.txt{
+    font-family:Gabriola;
+    font-size:24px;
+    padding:5%;
+}
+div.txt:first-letter{
+    color:orangered;
+    font-size:45px;
+}
+
+a:visited {
+    text-decoration:none;
+}
+a:link {
+    text-decoration: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+    .grid div.nonefect img {
+        width: 100%;
+        box-shadow: 6px 6px 3px gray;
+    }
+    .grid div.efect img {
+        width: 100%;
+        box-shadow: 4px 4px 3px gray;
+        transition: all 0.5s;
+    }
+   .grid div.efect img:hover {
+            box-shadow: none;
+            box-shadow: 0px 7px 4px gray;
+            border-radius: 40%;
+            transition: all 0.5s;
+    }
+
+.grid div:nth-child(1){
+    grid-column-start:1;
+    grid-column-end:3;
+}
+.grid div:nth-child(4){
+    grid-column-start:2;
+    grid-column-end:4;
+}
+
+.grid1 {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+.grid1 img {
+    width: 100%;
+    box-shadow: 6px 6px 3px gray;
+}
+
+.grid1 div:nth-child(5) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.grid3 {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.grid4 {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+iframe {
+    width: 100%;
+    height: 100%;
+    transition: 0.1s;
+}
+    iframe.border:hover {
+        border-left: 10px double gray;
+        border-right: 10px double gray;
+        width: calc(100% - 20px);
+        transition: 0.1s;
+    }
+
+hr {
+    border: none;
+    border-top: 3px double #333;
+    color: orangered;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+}
+
+    hr:after {
+        background: whitesmoke;
+        content: '§';
+        padding: 0 4px;
+        position: relative;
+        top: -20px;
+    }
+.contactimg{
+}
+
+input, textarea {
+    outline: none;
+}
+
+.form-inner {
+    padding: 40px;
+    text-align: center;
+}
+
+    .form-inner input,
+    .form-inner textarea {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 10px;
+        border: 1px solid gray;
+        border-radius: 20px;
+        background: white;
+    }
+
+    .form-inner textarea {
+        resize: none;
+    }
+/*---------->Footer<-------------*/
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    height: 100px;
+    background-image: url("button-bar-img1.jpg");
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+}
+
+/*-------------->Logo<----------------*/
+
+.btn div.logo {
+    font-family: Brush Script MT;
+    font-size:40px;
+    color:aliceblue;
+    text-shadow: 2px 1px 1px black;
+}
+
+ .btn {
+    display: grid;
+    grid-template-columns: 2fr  repeat(4,1fr);
+    text-align: center;
+}
+/*-------------->MENU BUTTONS<---------------*/
+ a div.btn-three {
+    cursor:pointer;
+    text-align: center;
+    font-family: Garamond;
+    font-size: 20px;
+    vertical-align: central;
+    color: white;
+    transition: all 0.5s;
+    position: relative;
+    display: flex;
+    height:50px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+    a div.btn-three::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: white;
+        opacity:0.1;
+        transition: all 0.3s;
+    }
+ .footer a:link {
+     color:white;
+    text-decoration:none;
+ }
+.footer a:visited{
+    color: white;
+    text-decoration: none;
+}
+.footer a:hover {
+    color: gray;
+    text-decoration: none;
+}
+a div.btn-three:hover::before {
+    opacity: 0;
+    transform: scale(0.5,0.5);
+}
+
+a div.btn-three::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid rgba(255,255,255,0.5);
+    transform: scale(1.2,1.2);
+}
+
+a div.btn-three:hover::after {
+    opacity: 1;
+    transform: scale(1,1);
+}
+
+
+
+/*------------->SUBMIT BUTTON<--------------*/
+button {
+ 
+    transition: all 1s;
+    position: relative;
+    width:200px;
+    border-radius:30%;
+    cursor:pointer;
+}
+    button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        transition: all 0.5s;
+        border: 2px solid rgba(0,0,0,0.2);
+        border-radius: 30%;
+        background-color: rgba(0,0,0,0.2);
+    }
+
+    button::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        transition: all 0.5s;
+        border: 2px solid rgba(0,0,0,0.2);
+        border-radius: 30%;
+        background-color: rgba(0,0,0,0.2);
+    }
+
+    button:hover::before {
+        transform: rotate(-45deg);
+        background-color: rgba(255,255,255,0);
+    }
+
+    button:hover::after {
+        transform: rotate(45deg);
+        background-color: rgba(255,255,255,0);
+    }
+
+    @media (max-width:1000px){
+        .grid{
+            grid-template-columns: 1fr;
+        }
+            .grid div:nth-child(1) {
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
+
+            .grid div:nth-child(4) {
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
+        
+        .grid1 {
+            grid-template-columns: 1fr;
+        }
+        .grid2 {
+            grid-template-columns: 1fr;
+        }
+        .grid3 {
+            grid-template-columns: 1fr;
+        }
+        .grid4 {
+            grid-template-columns: 1fr;
+        }
+            .grid1 div:nth-child(5) {
+                grid-column-start: 2;
+                grid-column-end: 3;
+            }
+    }
